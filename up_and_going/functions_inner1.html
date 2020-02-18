@@ -1,0 +1,27 @@
+a<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>functions inner</title>
+</head>
+
+<body>
+    <script>
+
+        function outer() {
+            var a = 2;
+            function inner() {
+                var b = 3;
+                console.log(a * b);
+            }
+
+            inner();
+            console.log(a);
+        }
+
+        outer();
+
+    </script>
+</body>
+
+</html>
