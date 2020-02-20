@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>nested scopes ... </title>
+</head>
+
+<body>
+    <script>
+        function foo() {
+            a = 123;
+        }
+
+        foo();
+        console.log(a);         // 123, we have created a global variable...
+                                // considered a bad practice.
+            
+    </script>
+</body>
+
+</html>

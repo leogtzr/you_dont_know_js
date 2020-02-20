@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hoisting ... </title>
+</head>
+
+<body>
+    <script>
+        var a = 2;
+        foo();
+
+        function foo() {
+            a = 3;
+            console.log(a);
+            var a;              // declaration is "hoisted" to the top of foo()
+        }
+
+        console.log(a);             // 2
+    </script>
+</body>
+
+</html>

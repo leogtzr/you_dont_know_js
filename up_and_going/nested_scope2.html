@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>nested scopes ... </title>
+</head>
+
+<body>
+    <script>
+        function foo() {
+            var a = 2;
+            if (a == 2) {
+                var c = 3;
+                console.log(c);
+            }
+            console.log(c);         // 3 even that it was declared inside the if scope ...
+                                    // to "fix" that we can use the "let" keyword.
+        }
+        foo();
+
+        // console.log(c);
+    </script>
+</body>
+
+</html>
