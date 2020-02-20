@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Function as values ...</title>
+</head>
+
+<body>
+    <script>
+
+        function caller(f) {
+            f();
+        }
+
+        var foo = function() {
+            console.log("Ok ...");
+        }
+
+        foo();
+
+        caller(function() {
+            console.log("What's up ...");
+        });
+    </script>
+</body>
+
+</html>
