@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>modules pattern</title>
+</head>
+
+<body>
+    <script>
+        function User() {
+            var username;
+            var password;
+
+            function doLogin(user, pwd) {
+                username = user;
+                password = pwd;
+                // do the rest of the login work
+            }
+
+            var publicAPI = {
+                login: doLogin
+            };
+
+            return publicAPI;
+        }
+
+        var fred = User();
+        fred.login("fred", "123123");
+
+    </script>
+</body>
+
+</html>

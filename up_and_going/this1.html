@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>this ...</title>
+</head>
+
+<body>
+    <script>
+        function foo() {
+            console.log(this.bar);
+        }
+
+        var bar = "global";
+
+        var obj1 = {
+            bar: "obj1",
+            foo: foo
+        };
+
+        var obj2 = {
+            bar: "obj2"
+        };
+
+        foo();
+        obj1.foo();
+        // Calls a method of an object, substituting another object
+        // for the current object:
+        foo.call(obj2);
+        new foo();
+        
+    </script>
+</body>
+
+</html>
