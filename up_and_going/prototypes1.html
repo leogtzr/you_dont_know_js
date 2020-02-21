@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>...</title>
+</head>
+
+<body>
+    <script>
+        var foo = {
+            a: 42
+        };
+        // create bar and link it to `foo`
+        var bar = Object.create(foo);
+
+        /*
+        When you reference a property on an object, if that property doesn’texist, JavaScript will automatically use that object’s 
+        internalprototype reference to find another object to look for the property on.You could think of this almost as a fallback if 
+        the property is missing.The internal prototype reference linkage from one object to its fallbackhappens at 
+        the time the object is created. The simplest way toillustrate it is with a built-in utility called Object.create(..).
+        */
+        bar.b = "hello world";
+
+        console.log(bar.b);
+        console.log(bar.a);
+    </script>
+</body>
+
+</html>
